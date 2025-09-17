@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stragali Messager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="login" class="login-container">
+    <div class="header">Stragali Messager (Only for: Thanos & Valadis)</div>
+    <h2>Login / Register</h2>
+    <div class="input-group">
+      <input id="loginUsername" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <input id="loginPassword" type="password" placeholder="Password">
+    </div>
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <div id="chat" class="chat-container">
+    <div class="chat-header">Stragali Messager (Only for: Thanos & Valadis)</div>
+    <div id="messages" class="chat-messages">
+      <p style="text-align:center; color:gray;">Please login to send and view messages.</p>
+    </div>
+    <div class="chat-input">
+      <div class="input-row">
+        <input id="message" placeholder="Type your message">
+        <button class="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+      <button class="delete-btn">ΚΟΥΜΠΙ ΕΚΤΑΚΤΗΣ ΑΝΑΓΚΗΣ</button>
+    </div>
+  </div>
+</div>
+
+<div id="notification" class="notification"></div>
+
+<!-- Emergency Delete Popup -->
+<div id="deletePopup">
+  <div class="popup-content">
+    <h3 style="color: red;">ΠΡΟΣΟΧΗ!</h3>
+    <p style="text-align: left; font-size: 14px;">
+      ΠΡΑΓΜΑΤΟΠΟΙΟΝΤΑΣ ΑΥΤΗΝ ΤΗΝ ΕΝΕΡΓΕΙΑ ΕΝΔΕΧΕΤΑΙ ΝΑ ΣΥΜΒΟΥΝ ΤΑ ΠΑΡΑΚΑΤΩ:<br><br>
+      - ΑΥΤΟΜΑΤΗ ΑΛΛΑΓΗ ΤΟΥ ΚΩΔΙΚΟΥ ΠΡΟΣΒΑΣΗΣ<br>
+      - ΔΙΑΓΡΑΦΗ ΟΛΩΝ ΤΩΝ ΣΥΝΟΜΙΛΙΩΝ<br>
+      - ΚΛΕΙΔΩΜΑ ΤΗΣ ΣΥΝΟΜΙΛΙΑΣ ΕΩΣ ΤΟ ΧΕΙΡΟΚΙΝΗΤΟ ΞΕΚΛΕΙΔΩΜΑ ΑΠΟ ΤΟΝ SERVER
+    </p>
+    <input type="password" id="deletePassword"><br><br>
+    <button onclick="confirmDelete()">ΣΥΝΕΧΕΙΑ</button>
+    <button onclick="closeDeletePopup()">ΑΚΥΡΟ</button>
+  </div>
+</div>
+
+<style>
+    /* Στυλ για να είναι το κουμπί κάτω αριστερά */
+    .bottom-left {
+      position: fixed;   /* Σταθερή θέση στην οθόνη */
+      bottom: 10px;      /* 10px από κάτω */
+      left: 10px;        /* 10px από αριστερά */
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 100px;
+      text-decoration: none; /* Αφαιρεί το underline του link */
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .bottom-left:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Κουμπί που ανοίγει link -->
+  <a href="https://drive.proton.me/urls/937YWBDGAM#swhzKAEzwkxk" target="_blank" class="bottom-left">
+    Διάλεκτος Αρχαίου Στραγαλιού
+  </a>
+
+<div id="userInfo" style="position:absolute; top:10px; left:10px; font-weight:bold;"></div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body { font-family: Arial; margin:0; padding:0; }
+  #userInfo {
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-weight:bold;
+    font-size:16px;
+  }
+</style>
+</head>
+<body>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
